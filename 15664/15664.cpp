@@ -15,6 +15,7 @@ void solution(int cnt) {
 		for (int i = 0; i < M; i++) {
 			printf("%d ", vec[i]);
 		}printf("\n");
+		return;
 	}
 	int prev = 0;
 	for (int i = 0; i < (int)temp.size(); i++) {
@@ -44,3 +45,4 @@ int main(void) {
 	
 	return 0;
 }
+
