@@ -19,16 +19,10 @@ void solution(int cnt) {
 	}
 	int prev = 0;
 	for (int i = 0; i < (int)temp.size(); i++) {
-		if (!check[i]&&prev!=temp[i]) {
-			for(int j=0;j<i;j++)
-				check[j] = true;
-			check[i] = true;
+		if (prev != temp[i]) {
 			vec[cnt] = temp[i];
 			prev = temp[i];
 			solution(cnt + 1);
-			for (int j = 0; j < i; j++)
-				check[j] = false;
-			check[i] = false;
 		}
 	}
 }
@@ -42,6 +36,6 @@ int main(void) {
 	}
 	sort(temp.begin(), temp.end());
 	solution(0);
-	
+
 	return 0;
 }
